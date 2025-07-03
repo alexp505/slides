@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const parallaxElements = document.querySelectorAll('.hero-visual, .tool-visual');
 
         parallaxElements.forEach(element => {
-            const speed = 0.5;
+            const speed = 0.1;
             const yPos = -(scrolled * speed);
             element.style.transform = `translateY(${yPos}px)`;
         });

@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Tools & Development - School21</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Header -->
     <header class="header">
-        <nav class="nav" aria-label="Главное меню">
-            <a href="#" class="nav-logo" aria-label="Главная страница School21 AI">
+        <nav class="nav">
+            <div class="nav-logo">
                 <span class="logo-text">School21</span>
                 <span class="logo-accent">AI</span>
-            </a>
+            </div>
             <ul class="nav-menu">
                 <li><a href="#genai">GenAI</a></li>
                 <li><a href="#tools">Инструменты</a></li>
@@ -25,9 +25,9 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" role="region" aria-labelledby="hero-title">
+    <section class="hero">
         <div class="hero-content">
-            <h1 id="hero-title" class="hero-title">
+            <h1 class="hero-title">
                 Революция в разработке с 
                 <span class="gradient-text">Artificial Intelligence</span>
             </h1>
@@ -49,7 +49,7 @@
                 </div>
             </div>
         </div>
-        <div class="hero-visual" aria-hidden="true">
+        <div class="hero-visual">
             <div class="floating-card">
                 <div class="card-header">
                     <div class="card-dots">
@@ -74,33 +74,33 @@
     </section>
 
     <!-- GenAI Section -->
-    <section id="genai" class="section" role="region" aria-labelledby="genai-title">
+    <section id="genai" class="section">
         <div class="container">
-            <h2 id="genai-title" class="section-title">Что такое Generative AI?</h2>
+            <h2 class="section-title">Что такое Generative AI?</h2>
             <div class="genai-grid">
-                <article class="genai-card">
-                    <div class="genai-icon" aria-hidden="true">🧠</div>
+                <div class="genai-card">
+                    <div class="genai-icon">🧠</div>
                     <h3>Генеративный ИИ</h3>
                     <p>Искусственный интеллект, способный создавать новый контент: код, текст, изображения, музыку и многое другое на основе обучения на больших наборах данных.</p>
-                </article>
-                <article class="genai-card">
-                    <div class="genai-icon" aria-hidden="true">🤖</div>
+                </div>
+                <div class="genai-card">
+                    <div class="genai-icon">🤖</div>
                     <h3>AI Агенты</h3>
                     <p>Автономные системы, которые могут воспринимать окружающую среду, принимать решения и выполнять действия для достижения конкретных целей.</p>
-                </article>
-                <article class="genai-card">
-                    <div class="genai-icon" aria-hidden="true">⚡</div>
+                </div>
+                <div class="genai-card">
+                    <div class="genai-icon">⚡</div>
                     <h3>Преимущества</h3>
                     <p>Автоматизация рутинных задач, ускорение разработки, помощь в принятии решений и создание инновационных решений.</p>
-                </article>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Tools Section -->
-    <section id="tools" class="section section-alt" role="region" aria-labelledby="tools-title">
+    <section id="tools" class="section section-alt">
         <div class="container">
-            <h2 id="tools-title" class="section-title">Инструменты нового поколения</h2>
+            <h2 class="section-title">Инструменты нового поколения</h2>
             
             <!-- Bolt.new -->
             <div class="tool-card">
@@ -117,7 +117,7 @@
                         <span class="feature">Деплой в один клик</span>
                     </div>
                 </div>
-                <div class="tool-visual" aria-hidden="true">
+                <div class="tool-visual">
                     <div class="browser-mockup">
                         <div class="browser-header">
                             <div class="browser-dots">
@@ -140,7 +140,7 @@
 
             <!-- Cursor -->
             <div class="tool-card">
-                <div class="tool-visual" aria-hidden="true">
+                <div class="tool-visual">
                     <div class="cursor-mockup">
                         <div class="cursor-sidebar">
                             <div class="cursor-file">📄 app.js</div>
@@ -190,13 +190,20 @@
                         <span class="feature">Экспорт в код</span>
                     </div>
                 </div>
-                <div class="tool-visual" aria-hidden="true">
+                <div class="tool-visual">
                     <div class="visily-mockup">
-                        <div class="visily-header">Visily UI</div>
-                        <div class="visily-content">
-                            <div class="visily-rectangle">+</div>
-                            <div class="visily-rectangle">+</div>
-                            <div class="visily-rectangle">+</div>
+                        <div class="visily-input">
+                            <div class="sketch">✏️ Набросок</div>
+                            <div class="visily-arrow">→</div>
+                        </div>
+                        <div class="visily-output">
+                            <div class="prototype">
+                                <div class="proto-header"></div>
+                                <div class="proto-content">
+                                    <div class="proto-card"></div>
+                                    <div class="proto-card"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -205,100 +212,192 @@
     </section>
 
     <!-- Participants Section -->
-    <section id="participants" class="section" role="region" aria-labelledby="participants-title">
+    <section id="participants" class="section">
         <div class="container">
-            <h2 id="participants-title" class="section-title">Участники проекта</h2>
+            <h2 class="section-title">Участники проекта</h2>
+            <p class="section-subtitle">Команда разработчиков, изучающих AI-инструменты</p>
+            
             <div class="participants-grid">
                 <div class="participant-card">
-                    <div class="participant-photo" aria-hidden="true"></div>
-                    <h3 class="participant-name">Анна Иванова</h3>
-                    <p class="participant-role">Project Manager</p>
+                    <div class="participant-photo">
+                        <img src="https://via.placeholder.com/150x150/1a1a2e/ffffff?text=Фото+1" alt="Участник 1">
+                    </div>
+                    <h4 class="participant-name">Имя участника</h4>
+                    <p class="participant-role">Frontend Developer</p>
                 </div>
+                
                 <div class="participant-card">
-                    <div class="participant-photo" aria-hidden="true"></div>
-                    <h3 class="participant-name">Дмитрий Петров</h3>
-                    <p class="participant-role">Lead Developer</p>
+                    <div class="participant-photo">
+                        <img src="https://via.placeholder.com/150x150/1a1a2e/ffffff?text=Фото+2" alt="Участник 2">
+                    </div>
+                    <h4 class="participant-name">Имя участника</h4>
+                    <p class="participant-role">Backend Developer</p>
                 </div>
+                
                 <div class="participant-card">
-                    <div class="participant-photo" aria-hidden="true"></div>
-                    <h3 class="participant-name">Елена Смирнова</h3>
-                    <p class="participant-role">AI Specialist</p>
+                    <div class="participant-photo">
+                        <img src="https://via.placeholder.com/150x150/1a1a2e/ffffff?text=Фото+3" alt="Участник 3">
+                    </div>
+                    <h4 class="participant-name">Имя участника</h4>
+                    <p class="participant-role">AI Engineer</p>
                 </div>
+                
                 <div class="participant-card">
-                    <div class="participant-photo" aria-hidden="true"></div>
-                    <h3 class="participant-name">Игорь Кузнецов</h3>
-                    <p class="participant-role">UI/UX Designer</p>
+                    <div class="participant-photo">
+                        <img src="https://via.placeholder.com/150x150/1a1a2e/ffffff?text=Фото+4" alt="Участник 4">
+                    </div>
+                    <h4 class="participant-name">Имя участника</h4>
+                    <p class="participant-role">UX/UI Designer</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Project Section -->
-    <section id="project" class="section section-alt" role="region" aria-labelledby="project-title">
+    <section id="project" class="section section-alt">
         <div class="container">
-            <h2 id="project-title" class="section-title">Проект: Автоматизация разработки с AI</h2>
+            <h2 class="section-title">Финальный проект</h2>
             <div class="project-content">
-                <p>Наш проект посвящён созданию AI-агентов, которые помогают ускорить и улучшить процессы разработки. Каждый агент выполняет уникальные задачи и работает в команде для достижения максимальной эффективности.</p>
-                <div class="agents-list">
-                    <div class="agent-card">
-                        <div class="agent-icon">🤖</div>
-                        <div>
-                            <h3 class="agent-name">Agent Alpha</h3>
-                            <p class="agent-role">Кодогенерация и оптимизация</p>
+                <div class="project-info">
+                    <h3 class="project-title">Чат-бот с тремя AI агентами</h3>
+                    <p class="project-description">
+                        Создаем умный чат-бот, использующий три специализированных AI агента 
+                        для решения различных задач пользователей.
+                    </p>
+                    
+                    <div class="agents-grid">
+                        <div class="agent-card">
+                            <div class="agent-icon">🎯</div>
+                            <div>
+                                <h4>Агент-Аналитик</h4>
+                                <p>Анализирует запросы пользователей и определяет оптимальную стратегию решения</p>
+                            </div>
+                        </div>
+                        
+                        <div class="agent-card">
+                            <div class="agent-icon">⚡</div>
+                            <div>
+                                <h4>Агент-Исполнитель</h4>
+                                <p>Выполняет конкретные задачи: генерация кода, создание контента, вычисления</p>
+                            </div>
+                        </div>
+                        
+                        <div class="agent-card">
+                            <div class="agent-icon">🔍</div>
+                            <div>
+                                <h4>Агент-Контролер</h4>
+                                <p>Проверяет качество результатов и предлагает улучшения</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="agent-card">
-                        <div class="agent-icon">🧩</div>
-                        <div>
-                            <h3 class="agent-name">Agent Beta</h3>
-                            <p class="agent-role">Тестирование и отладка</p>
+                </div>
+                
+                <div class="project-visual">
+                    <div class="chatbot-mockup">
+                        <div class="chatbot-header">
+                            <div class="chatbot-title">AI Assistant</div>
+                            <div class="chatbot-status">
+                                <div class="status-dot active"></div>
+                                <span>3 агента онлайн</span>
+                            </div>
+                        </div>
+                        <div class="chatbot-messages">
+                            <div class="message user">
+                                <span>Помоги создать веб-приложение</span>
+                            </div>
+                            <div class="message agent analyst">
+                                <span>Аналитик: Анализирую требования...</span>
+                            </div>
+                            <div class="message agent executor">
+                                <span>Исполнитель: Генерирую код...</span>
+                            </div>
+                            <div class="message agent controller">
+                                <span>Контролер: Проверяю качество...</span>
+                            </div>
+                        </div>
+                        <div class="chatbot-input">
+                            <input type="text" placeholder="Введите сообщение...">
+                            <button>→</button>
                         </div>
                     </div>
-                    <div class="agent-card">
-                        <div class="agent-icon">📊</div>
-                        <div>
-                            <h3 class="agent-name">Agent Gamma</h3>
-                            <p class="agent-role">Анализ и отчетность</p>
+                </div>
+            </div>
+
+            <!-- Project Screenshots Section -->
+            <div class="screenshots-section">
+                <h3 class="screenshots-title">Результаты проекта</h3>
+                <div class="screenshots-grid">
+                    <div class="screenshot-card">
+                        <div class="screenshot-image">
+                            <span>Скриншот интерфейса чат-бота<br>📱 Загрузите изображение</span>
                         </div>
+                        <h4 class="screenshot-title">Главный интерфейс</h4>
+                        <p class="screenshot-description">
+                            Современный и интуитивный интерфейс чат-бота с поддержкой трех AI агентов
+                        </p>
+                    </div>
+
+                    <div class="screenshot-card">
+                        <div class="screenshot-image">
+                            <span>Демонстрация работы агентов<br>🤖 Загрузите изображение</span>
+                        </div>
+                        <h4 class="screenshot-title">Работа агентов</h4>
+                        <p class="screenshot-description">
+                            Координированная работа трех AI агентов для решения сложных задач
+                        </p>
+                    </div>
+
+                    <div class="screenshot-card">
+                        <div class="screenshot-image">
+                            <span>Архитектура системы<br>⚙️ Загрузите изображение</span>
+                        </div>
+                        <h4 class="screenshot-title">Архитектура</h4>
+                        <p class="screenshot-description">
+                            Схема взаимодействия компонентов и архитектура многоагентной системы
+                        </p>
+                    </div>
+
+                    <div class="screenshot-card">
+                        <div class="screenshot-image">
+                            <span>Результаты тестирования<br>📊 Загрузите изображение</span>
+                        </div>
+                        <h4 class="screenshot-title">Тестирование</h4>
+                        <p class="screenshot-description">
+                            Результаты тестирования производительности и качества работы системы
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Новый блок "Результаты проекта" -->
-    <section id="results" class="section" role="region" aria-labelledby="results-title">
-      <div class="container">
-        <h2 id="results-title" class="section-title">Результаты проекта</h2>
-        <div class="screenshots-grid">
-          <div class="screenshot-card">
-            <div class="screenshot-image" style="background:#444; height: 150px; border-radius: 10px; display:flex; align-items:center; justify-content:center; color:#ccc;">
-              Скриншот 1
-            </div>
-            <h3 class="screenshot-title">Интерфейс пользователя</h3>
-            <p class="screenshot-description">Главный экран приложения с AI агентами.</p>
-          </div>
-          <div class="screenshot-card">
-            <div class="screenshot-image" style="background:#444; height: 150px; border-radius: 10px; display:flex; align-items:center; justify-content:center; color:#ccc;">
-              Скриншот 2
-            </div>
-            <h3 class="screenshot-title">Рабочий процесс</h3>
-            <p class="screenshot-description">Визуализация процесса автоматизации разработки.</p>
-          </div>
-          <div class="screenshot-card">
-            <div class="screenshot-image" style="background:#444; height: 150px; border-radius: 10px; display:flex; align-items:center; justify-content:center; color:#ccc;">
-              Скриншот 3
-            </div>
-            <h3 class="screenshot-title">Аналитика и отчеты</h3>
-            <p class="screenshot-description">Данные и отчеты, генерируемые AI агентами.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Footer -->
-    <footer class="footer" role="contentinfo">
-        <p>© 2025 School21 AI. Все права защищены.</p>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>School21 AI</h4>
+                    <p>Изучаем будущее разработки</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Инструменты</h4>
+                    <ul>
+                        <li><a href="https://bolt.new">Bolt.new</a></li>
+                        <li><a href="https://cursor.sh">Cursor</a></li>
+                        <li><a href="https://visily.ai">Visily</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакты</h4>
+                    <p>AI меняет мир разработки прямо сейчас</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 School21 AI Project. Будущее уже здесь.</p>
+            </div>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

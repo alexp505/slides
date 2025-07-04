@@ -1,4 +1,4 @@
-/* Основные исправления для выравнивания блоков */
+/* Основные стили с сохранением дизайна */
 :root {
     --primary-color: #1a1a2e;
     --secondary-color: #16213e;
@@ -139,6 +139,7 @@ body {
     max-width: 450px;
     margin: 0 auto;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    /* Упрощенная анимация без конфликтов */
     animation: float 4s ease-in-out infinite;
 }
 
@@ -664,6 +665,20 @@ body {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     font-size: 0.9rem;
     color: rgba(255, 255, 255, 0.6);
+}
+
+/* Критичные исправления для предотвращения "взлета" */
+.hero-visual, 
+.tool-visual {
+    transform: none !important;
+}
+
+.floating-card {
+    transform: none !important;
+}
+
+.section {
+    overflow: hidden;
 }
 
 /* Responsive */

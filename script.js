@@ -1,4 +1,3 @@
-<script>
 document.addEventListener('DOMContentLoaded', function() {
     // Smooth scrolling for navigation links
     const navLinks = document.querySelectorAll('nav a[href^="#"]');
@@ -21,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-
+    
     // Header background on scroll
     const header = document.querySelector('.header');
     
@@ -32,13 +31,13 @@ document.addEventListener('DOMContentLoaded', function() {
             header.style.background = 'rgba(10, 10, 10, 0.95)';
         }
     });
-
+    
     // Intersection Observer for animations
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
     };
-
+    
     const observer = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -47,33 +46,19 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }, observerOptions);
-
+    
+    // Observe elements for animation
     const animatedElements = document.querySelectorAll(
-        '.genai-card, .tool-card, .participant-card, .agent-card'
+        '.genai-card, .tool-card, .participant-card, .agent-card, .screenshot-card'
     );
-
+    
     animatedElements.forEach(element => {
         element.style.opacity = '0';
         element.style.transform = 'translateY(30px)';
         element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(element);
     });
-
-    // Typing effect for hero title (optional, function defined but not called here)
-    function typeWriter(element, text, speed = 100) {
-        let i = 0;
-        element.innerHTML = '';
-        
-        function type() {
-            if (i < text.length) {
-                element.innerHTML += text.charAt(i);
-                i++;
-                setTimeout(type, speed);
-            }
-        }
-        type();
-    }
-
+    
     // Chatbot simulation
     const chatbotMessages = document.querySelector('.chatbot-messages');
     const messages = [
@@ -82,20 +67,25 @@ document.addEventListener('DOMContentLoaded', function() {
         { type: 'agent executor', text: 'Исполнитель: Генерирую код...', delay: 2000 },
         { type: 'agent controller', text: 'Контролер: Проверяю качество...', delay: 3000 }
     ];
-
+    
     function simulateChatbot() {
+        // Clear existing messages
         chatbotMessages.innerHTML = '';
-        messages.forEach((message) => {
+        
+        messages.forEach((message, index) => {
             setTimeout(() => {
                 const messageElement = document.createElement('div');
                 messageElement.className = `message ${message.type}`;
                 messageElement.innerHTML = `<span>${message.text}</span>`;
                 chatbotMessages.appendChild(messageElement);
+                
+                // Scroll to bottom
                 chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
             }, message.delay);
         });
     }
-
+    
+    // Start chatbot simulation when section is visible
     const chatbotSection = document.getElementById('project');
     const chatbotObserver = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
@@ -105,59 +95,21 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }, { threshold: 0.5 });
-
+    
     chatbotObserver.observe(chatbotSection);
-
-    // Floating animation for hero card
-    const floatingCard = document.querySelector('.floating-card');
-    if (floatingCard) {
-        let mouseX = 0;
-        let mouseY = 0;
-
-        document.addEventListener('mousemove', function(e) {
-            mouseX = e.clientX;
-            mouseY = e.clientY;
-        });
-
-        function animateCard() {
-            const rect = floatingCard.getBoundingClientRect();
-            const cardX = rect.left + rect.width / 2;
-            const cardY = rect.top + rect.height / 2;
-
-            const deltaX = (mouseX - cardX) * 0.01;
-            const deltaY = (mouseY - cardY) * 0.01;
-
-            floatingCard.style.transform = `translate(${deltaX}px, ${deltaY}px) rotateY(${deltaX * 0.5}deg) rotateX(${-deltaY * 0.5}deg)`;
-
-            requestAnimationFrame(animateCard);
-        }
-
-        animateCard();
-    }
-
-    // Parallax effect for sections
-    window.addEventListener('scroll', function() {
-        const scrolled = window.pageYOffset;
-        const parallaxElements = document.querySelectorAll('.hero-visual, .tool-visual');
-
-        parallaxElements.forEach(element => {
-            const speed = 0.2;
-            const yPos = -(scrolled * speed);
-            element.style.transform = `translateY(${yPos}px)`;
-        });
-    });
-
+    
     // Stats counter animation
     function animateCounters() {
         const counters = document.querySelectorAll('.stat-number');
+        
         counters.forEach(counter => {
             const target = counter.textContent;
             if (target === '10x' || target === '∞') return;
-
+            
             const targetNum = parseInt(target);
             let current = 0;
             const increment = targetNum / 50;
-
+            
             const updateCounter = () => {
                 if (current < targetNum) {
                     current += increment;
@@ -167,11 +119,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     counter.textContent = target;
                 }
             };
+            
             updateCounter();
         });
     }
-
-    const heroSection = document.querySelector('.hero');
+    
+    // Trigger counter animation when hero is visible
     const heroObserver = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -180,7 +133,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }, { threshold: 0.5 });
-
+    
+    const heroSection = document.querySelector('.hero');
     heroObserver.observe(heroSection);
 });
-</script>
